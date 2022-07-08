@@ -16,11 +16,7 @@
 		<maven.compiler.target>1.6</maven.compiler.target>
 	</properties>
 	
-	<plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-compiler-plugin</artifactId>
-		<version>3.8.1</version>
-	</plugin>
+	
 	<dependencies>
 	  <dependency>
             <groupId>info.cukes</groupId>
@@ -61,11 +57,19 @@
   		        <version>6.9.10</version>
                 </dependency>
         </dependencies>
-	<build>
+	
     <resources>
         <resource>
             <directory>src/main/resources</directory>
         </resource>
     </resources>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+			</plugin>
+		</plugins>
  </build>
 </project>
